@@ -83,3 +83,8 @@
 ### 📪 Contact
 * **Email:** [eyj031127@gmail.com](mailto:eyj031127@gmail.com)
 * **Velog:** [https://velog.io/@steadycat](https://velog.io/@steadycat)
+
+---
+remote_theme: pages-themes/cayman@v0.2.0
+title: "엄예지 | 데이터 전문가 포트폴리오 🐾"
+description: "데이터 분석 기획부터 시각화, 보안까지 데이터의 전 생애주기를 기록합니다."
