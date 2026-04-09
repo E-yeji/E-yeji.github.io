@@ -1,3 +1,15 @@
+<div align="center">
+  <br />
+  <a href="./assets/엄예지_포트폴리오.pdf" download>
+    <img src="https://img.shields.io/badge/PDF_Download-FF4B4B?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="#about-me">
+    <img src="https://img.shields.io/badge/View_Online-0078D4?style=for-the-badge&logo=microsoft-edge&logoColor=white" />
+  </a>
+  <br /><br />
+</div>
+
 ## 안녕하세요, 데이터의 전 생애주기를 다루는 전문가로 발전할 엄예지입니다.
 
 > **"데이터 분석 기획부터 시각화, 그리고 개인정보 보호까지 - 데이터의 생애주기를 공부하고 기록합니다."**
