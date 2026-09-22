@@ -15,11 +15,14 @@ plugins:
 
 # 프로필 (좌측 사이드바) 설정
 author:
-  name: "E-yeji"
-  avatar: "https://github.com/E-yeji.png" # 깃허브 프로필 이미지 자동 연동
-  bio: "Database Management & Security"
+  name: "Eum yeji"
+  avatar: "https://github.com/E-yeji.png"
+  bio: "Database Administration & Security"
   location: "South Korea"
   links:
+    - label: "Tistory Blog"
+      icon: "fas fa-fw fa-blog"
+      url: "https://yezii27.tistory.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/E-yeji"
