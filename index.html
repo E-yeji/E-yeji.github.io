@@ -153,7 +153,7 @@
         			<div class="col-lg-6" style="margin-top: 15px;">
         				<div class="tools_expert">
 							<!-- 헤더 및 퍼센티지 산정 기준 툴팁 -->
-							<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+							<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
 								<h3 style="margin-bottom: 0;">Technical Skills</h3>
 
 								<div class="criterion-tooltip-wrapper" style="position: relative; display: inline-block;">
@@ -167,121 +167,176 @@
 										<div style="font-weight: bold; font-size: 13px; color: #333; margin-bottom: 8px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px;">숙련도(%) 산정 기준</div>
 
 										<ul style="list-style: none; padding: 0; margin: 0; font-size: 11px; color: #555; line-height: 1.5; text-align: left;">
-											<li style="margin-bottom: 6px;"><strong>🔹90% (Expert):</strong> 주력 언어/기술. 대용량 처리, 파이프라인 구축, 성능 병목 분석 및 최적화 완수 경험.</li>
-											<li style="margin-bottom: 6px;"><strong>🔹80 ~ 85% (Proficient):</strong> 실무/프로젝트 수준 완숙. 트러블슈팅, 아키텍처 이해, 백업/복구 및 HA 구축 경험.</li>
-											<li style="margin-bottom: 6px;"><strong>🔹70 ~ 75% (Competent):</strong> 핵심 개념 이해. 기본 운영, 로그 분석, 스크립팅, 보안 설정 자립 수행.</li>
-											<li><strong>🔹50 ~ 60% (Working):</strong> 기초 작동 원리 파악. 문서 참고 시 기본 설정 및 조작 가능.</li>
+											<li style="margin-bottom: 6px;"><strong>🔹90% (Expert):</strong> 주력 언어/기술. 복잡한 데이터 처리, 파이프라인 구축, 성능 병목 원인 분석 및 최적화 완수 경험 보유.</li>
+											<li style="margin-bottom: 6px;"><strong>🔹80 ~ 85% (Proficient):</strong> 실무/프로젝트 수준 능숙. 트러블슈팅, 아키텍처 이해, 백업/복구 및 HA 환경 구축 경험 보유.</li>
+											<li style="margin-bottom: 6px;"><strong>🔹70 ~ 75% (Competent):</strong> 핵심 개념 이해. 기본 운영, 로그 분석, 스크립팅, 보안 설정 스스로 수행 가능.</li>
+											<li><strong>🔹50 ~ 60% (Basic):</strong> 기초 개념 및 작동 원리 파악. 가이드 및 문서를 참고하여 기본 설정 및 조작 가능.</li>
 										</ul>
 									</div>
 								</div>
 							</div>
+
+							<!-- 탭 버튼 영역 -->
+							<div class="skill-tab-menu" style="display: flex; gap: 8px; margin-bottom: 20px;">
+								<button class="skill-tab-btn active" onclick="switchSkillTab('tab-db-core', this)">
+									Database Core (5)
+								</button>
+								<button class="skill-tab-btn" onclick="switchSkillTab('tab-eng-ops', this)">
+									Engineering &amp; Security (4)
+								</button>
+							</div>
 							
         					<div class="skill_main">
-								<!-- 1. MySQL & Storage Engine -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">MySQL &amp; Storage Engine</span>
-										<span style="margin-right: 6px;"><span class="counter">85</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								<!-- Tab 1: Database Core (5개) -->
+								<div id="tab-db-core" class="skill-tab-content active">
+									<!-- 1. MySQL & Storage Engine -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">MySQL &amp; Storage Engine</span>
+											<span style="margin-right: 6px;"><span class="counter">85</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<!-- 2. SQL & Data Modeling -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">SQL &amp; Data Modeling</span>
+											<span style="margin-right: 6px;"><span class="counter">90</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<!-- 3. Oracle DB & Architecture -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">Oracle DB &amp; Architecture</span>
+											<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									
+									<!-- 4. DB Performance & Tuning -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">DB Performance &amp; Tuning</span>
+											<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									
+									<!-- 5. Backup, Recovery & HA -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">Backup, Recovery &amp; HA</span>
+											<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
 									</div>
 								</div>
 
-								<!-- 2. SQL & Data Modeling -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">SQL &amp; Data Modeling</span>
-										<span style="margin-right: 6px;"><span class="counter">90</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+								<!-- Tab 2: Engineering & Security (4개) -->
+								<div id="tab-eng-ops" class="skill-tab-content">
+									<!-- 1. Python & Data Pipeline -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">Python &amp; Data Pipeline</span>
+											<span style="margin-right: 6px;"><span class="counter">80</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
 									</div>
-								</div>
 
-								<!-- 3. Python & Data Pipeline -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">Python &amp; Data Pipeline</span>
-										<span style="margin-right: 6px;"><span class="counter">80</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									<!-- 2. Linux & Shell Scripting -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">Linux &amp; Shell Scripting</span>
+											<span style="margin-right: 6px;"><span class="counter">75</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
 									</div>
-								</div>
 
-								<!-- 4. Linux & Shell Scripting -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">Python &amp; Data Pipeline</span>
-										<span style="margin-right: 6px;"><span class="counter">75</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+									<!-- 3. System & Network Security -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">System &amp; Network Security</span>
+											<span style="margin-right: 8px;"><span class="counter">80</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
 									</div>
-								</div>
 
-								<!-- 5. Git & Version Control -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">Git &amp; Version Control</span>
-										<span style="margin-right: 6px;"><span class="counter">70</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									<!-- 4. Git & Version Control -->
+									<div class="skill_item" style="margin-bottom: 20px;">
+										<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
+											<span style="margin-left: 8px;">Git &amp; Version Control</span>
+											<span style="margin-right: 6px;"><span class="counter">70</span>%</span>
+										</h4>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
 									</div>
 								</div>
-
-								<!-- 6. DB Performance & Tuning -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">DB Performance &amp; Tuning</span>
-										<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-
-								<!-- 7. Backup, Recovery & HA -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">Backup, Recovery &amp; HA</span>
-										<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-
-								<!-- 8. System & Network Security -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">System &amp; Network Security</span>
-										<span style="margin-right: 8px;"><span class="counter">80</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-								
-								<!-- 9. Oracle DB & Architecture -->
-								<div class="skill_item" style="margin-bottom: 20px;">
-									<h4 style="display: flex; justify-content: space-between; text-align: left; margin-bottom: 4px;">
-										<span style="margin-left: 8px;">Oracle DB &amp; Architecture</span>
-										<span style="margin-right: 8px;"><span class="counter">75</span>%</span>
-									</h4>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-										
+									
 							</div>
         				</div>
         			</div>
 
-					<!-- 툴팁 마우스 호버 동작 스타일 -->
+					<!-- 탭 스타일 및 스크립트 -->
 					<style>
+						/* 탭 버튼 스타일 */
+						.skill-tab-btn {
+							flex: 1;
+							padding: 8px 12px;
+							font-size: 13px;
+							font-weight: 600;
+							color: #666;
+							background: #f8f9fa;
+							border: 1px solid #e0e0e0;
+							border-radius: 8px;
+							cursor: pointer;
+							transition: all 0.25s ease;
+						}
+						.skill-tab-btn:hover {
+							background: #edf2f7;
+							color: #333;
+						}
+						.skill-tab-btn.active {
+							background: #4a90e2;
+							color: #ffffff;
+							border-color: #4a90e2;
+							box-shadow: 0 3px 8px rgba(74, 144, 226, 0.3);
+						}
+
+						/* 탭 콘텐츠 숨김/노출 */
+						.skill-tab-content {
+							display: none;
+						}
+						.skill-tab-content.active {
+							display: block;
+							animation: fadeIn 0.3s ease;
+						}
+
+						@keyframes fadeIn {
+							from { opacity: 0; transform: translateY(4px); }
+							to { opacity: 1; transform: translateY(0); }
+						}
+
+						/* 툴팁 마우스 호버 동작 스타일 */
 						.criterion-tooltip-wrapper:hover .criterion-tooltip {
 							opacity: 1 !important;
 							visibility: visible !important;
@@ -292,6 +347,23 @@
 							color: #333 !important;
 						}
 					</style>
+
+					<script>
+						function switchSkillTab(tabId, btn) {
+							// 모든 탭 내용 숨기기
+							document.querySelectorAll('.skill-tab-content').forEach(content => {
+								content.classList.remove('active');
+							});
+							// 모든 탭 버튼 비활성화
+							document.querySelectorAll('.skill-tab-btn').forEach(button => {
+								button.classList.remove('active');
+							});
+
+							// 선택한 탭 내용 및 버튼 활성화
+							document.getElementById(tabId).classList.add('active');
+							btn.classList.add('active');
+						}
+					</script>
 					
         		</div>
         	</div>
