@@ -93,54 +93,61 @@
         <section class="welcome_area p_120">
         	<div class="container">
         		<div class="row welcome_inner">
+					<!-- 왼쪽 About Me 영역 -->
         			<div class="col-lg-6">
         				<div class="welcome_text">
         					<h4>About Me</h4>
         					<p>이론적 지식에 머물지 않고 다수의 프로젝트에서 데이터를 직접 다루며 실무 감각을 키워왔습니다. 복잡한 문제를 집요하게 탐구하고 논리적으로 풀어내는 과정에서 큰 보람을 느끼고 있습니다. 특히, 탄탄한 기본기를 바탕으로 새로운 기술을 빠르게 습득하고 적용하는 데 즐거움을 느낍니다.</p>
-        					<div class="row style_one" style="margin-top: -15px;">
+        					
+							<div class="row style_one" style="margin-top: -15px;">
 								<!-- 1. 총 학점 -->
         						<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
-        							<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+        							<div class="wel_item clickable_item" onclick="window.open('gpa-overall.html', '_blank')" title="전체 성적표 보기">
         								<i class="lnr lnr-graduation-hat"></i>
         								<h4>4.13</h4>
         								<p>Overall GPA</p>
         							</div>
         						</div>
+								
 								<!-- 2. 프로젝트 수 -->
 								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
-									<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+									<div class="wel_item clickable_item" onclick="scrollToSection('projects')" title="Projects 섹션으로 이동">
 										<i class="lnr lnr-database"></i>
 										<h4>13+</h4>
 										<p>Projects</p>
 									</div>
 								</div>
+								
 								<!-- 3. 수상 수 -->
-								<div class="col-md-4 col-sm-6">
-									<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="wel_item clickable_item" onclick="scrollToSection('awards')" title="Awards 섹션으로 이동">
 										<i class="lnr lnr-star"></i>
 										<h4>6</h4>
 										<p>Awards</p>
 									</div>
 								</div>
+								
 								<!-- 4. 전공 학점 -->
         						<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
-        							<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+        							<div class="wel_item clickable_item" onclick="window.open('gpa-major.html', '_blank')" title="전공 성적표 보기">
         								<i class="lnr lnr-book"></i>
         								<h4>4.19</h4>
         								<p>Major GPA</p>
         							</div>
         						</div>
+								
 								<!-- 5. 연구 논문 수 -->
-								<div class="col-md-4 col-sm-6">
-									<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="wel_item clickable_item" onclick="scrollToSection('projects')" title="Research 섹션으로 이동">
 										<i class="lnr lnr-file-empty"></i>
 										<h4>3</h4>
 										<p>Research</p>
 									</div>
 								</div>
+								
 								<!-- 6. 자격증 및 수료증 수 -->
-								<div class="col-md-4 col-sm-6">
-									<div class="wel_item" style="padding: 18px 5px; text-align: center; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="wel_item clickable_item" onclick="scrollToSection('certificates')" title="Certificates 섹션으로 이동">
 										<i class="lnr lnr-license"></i>
 										<h4>3+</h4>
 										<p>Certificates</p>
@@ -149,6 +156,7 @@
 							</div>
         				</div>
         			</div>
+
 					<!-- 오른쪽 기술 스택 영역 -->
         			<div class="col-lg-6" style="margin-top: 15px;">
         				<div class="tools_expert">
