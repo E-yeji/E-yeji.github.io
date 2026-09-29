@@ -299,10 +299,70 @@
 										</div>
 									</div>
 								</div>
-									
 							</div>
-        				</div>
-        			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CSS 스타일 정의 -->
+		<style>
+			.wel_item {
+				padding: 18px 5px;
+				text-align: center;
+				border: 1px solid #eee;
+				border-radius: 12px;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+				transition: all 0.25s ease-in-out;
+			}
+			.clickable_item {
+				cursor: pointer;
+			}
+			.clickable_item:hover {
+				transform: translateY(-5px);
+				border-color: #4a90e2 !important;
+				box-shadow: 0 8px 18px rgba(74, 144, 226, 0.15) !important;
+			}
+			.skill-tab-btn {
+				flex: 1;
+				padding: 8px 12px;
+				font-size: 13px;
+				font-weight: 600;
+				color: #666;
+				background: #f8f9fa;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: all 0.25s ease;
+			}
+			.skill-tab-btn:hover {
+				background: #edf2f7;
+				color: #333;
+			}
+			.skill-tab-btn.active {
+				background: #4a90e2;
+				color: #ffffff;
+				border-color: #4a90e2;
+				box-shadow: 0 3px 8px rgba(74, 144, 226, 0.3);
+			}
+			.skill-tab-content {
+				display: none;
+			}
+			.skill-tab-content.active {
+				display: block;
+			}
+			.skill_main .progress-bar {
+				transition: width 1s ease-in-out !important;
+			}
+			.criterion-tooltip-wrapper:hover .criterion-tooltip {
+				opacity: 1 !important;
+				visibility: visible !important;
+				top: 34px !important;
+			}
+				
+				
+
 
 					<!-- 탭 스타일 및 스크립트 -->
 					<style>
