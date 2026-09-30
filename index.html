@@ -360,9 +360,79 @@
 				visibility: visible !important;
 				top: 34px !important;
 			}
-				
-				
+			.criterion-btn:hover {
+				background: #e2e8f0 !important;
+				color: #333 !important;
+			}
+		</style>
 
+		<!-- JS 스크립트 정의 -->
+		<script>
+			// 섹션 이동 스크롤 함수
+			function scrollToSection(sectionId) {
+				const targetElement = document.getElementById(sectionId) || document.querySelector('.' + sectionId);
+				
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start'
+					});
+				} else {
+					console.warn("해당 ID나 Class를 가진 섹션을 찾을 수 없습니다: " + sectionId);
+				}
+			}
+
+			// 스킬 탭 애니메이션 실행 함수
+			function animateTabSkills(container) {
+				const items = container.querySelectorAll('.skill_item');
+
+				items.forEach(item => {
+					const progressBar = item.querySelector('.progress-bar');
+					const counterSpan = item.querySelector('.counter');
+					if (!progressBar || !counterSpan) return;
+
+					const targetVal = parseInt(progressBar.getAttribute('aria-valuenow') || counterSpan.innerText, 10);
+
+					progressBar.style.width = '0%';
+					setTimeout(() => {
+						progressBar.style.width = targetVal + '%';
+					}, 50);
+
+					counterSpan.innerText = '0';
+					let currentVal = 0;
+					const duration = 1000;
+					const stepTime = Math.max(Math.floor(duration / targetVal), 15);
+
+					if (counterSpan.timer) clearInterval(counterSpan.timer);
+						
+					counterSpan.timer = setInterval(() => {
+						currentVal += 1;
+						if (currentVal >= targetVal) {
+							counterSpan.innerText = targetVal;
+							clearInterval(counterSpan.timer);
+						} else {
+							counterSpan.innerText = currentVal;
+						}
+					}, stepTime);
+				});
+			}
+
+			// 스킬 탭 전환 처리 함수
+			function switchSkillTab(tabId, btn) {
+				document.querySelectorAll('.skill-tab-content').forEach(content => {
+					content.classList.remove('active');
+				});
+				document.querySelectorAll('.skill-tab-btn').forEach(button => {
+					button.classList.remove('active');
+				});
+
+				const activeTab = document.getElementById(tabId);
+				activeTab.classList.add('active');
+				btn.classList.add('active');
+
+				animateTabSkills(activeTab);
+			}
+		</script>
 
 					<!-- 탭 스타일 및 스크립트 -->
 					<style>
@@ -473,10 +543,6 @@
 							animateTabSkills(activeTab);
 						}
 					</script>
-					
-        		</div>
-        	</div>
-        </section>
         <!--================End Welcome Area =================-->
         
         <!--================Feature Area =================-->
