@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Eum Yeji</title>
+        <title>Eum Yeji | Portfolio</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -391,18 +391,22 @@
 					const counterSpan = item.querySelector('.counter');
 					if (!progressBar || !counterSpan) return;
 
+					// 목표 퍼센트 값 가져오기
 					const targetVal = parseInt(progressBar.getAttribute('aria-valuenow') || counterSpan.innerText, 10);
 
+					// 1. 프로그레스 바 초기화 후 차오르게 만들기
 					progressBar.style.width = '0%';
 					setTimeout(() => {
 						progressBar.style.width = targetVal + '%';
 					}, 50);
 
+					// 2. 숫자 카운트 업 (0부터 목표 값까지)
 					counterSpan.innerText = '0';
 					let currentVal = 0;
 					const duration = 1000;
 					const stepTime = Math.max(Math.floor(duration / targetVal), 15);
 
+					// 기존에 실행 중인 타이머가 있으면 중지
 					if (counterSpan.timer) clearInterval(counterSpan.timer);
 						
 					counterSpan.timer = setInterval(() => {
@@ -433,116 +437,6 @@
 				animateTabSkills(activeTab);
 			}
 		</script>
-
-					<!-- 탭 스타일 및 스크립트 -->
-					<style>
-						/* 탭 버튼 스타일 */
-						.skill-tab-btn {
-							flex: 1;
-							padding: 8px 12px;
-							font-size: 13px;
-							font-weight: 600;
-							color: #666;
-							background: #f8f9fa;
-							border: 1px solid #e0e0e0;
-							border-radius: 8px;
-							cursor: pointer;
-							transition: all 0.25s ease;
-						}
-						.skill-tab-btn:hover {
-							background: #edf2f7;
-							color: #333;
-						}
-						.skill-tab-btn.active {
-							background: #4a90e2;
-							color: #ffffff;
-							border-color: #4a90e2;
-							box-shadow: 0 3px 8px rgba(74, 144, 226, 0.3);
-						}
-
-						/* 탭 콘텐츠 애니메이션 */
-						.skill-tab-content {
-							display: none;
-						}
-						.skill-tab-content.active {
-							display: block;
-						}
-
-						/* 프로그레스 바 자체 애니메이션 트랜지션 설정 */
-						.skill_main .progress-bar {
-							transition: width 1s ease-in-out !important;
-						}
-						
-						/* 툴팁 마우스 호버 스타일 */
-						.criterion-tooltip-wrapper:hover .criterion-tooltip {
-							opacity: 1 !important;
-							visibility: visible !important;
-							top: 34px !important;
-						}
-						.criterion-btn:hover {
-							background: #e2e8f0 !important;
-							color: #333 !important;
-						}
-					</style>
-
-					<script>
-						function animateTabSkills(container) {
-							const items = container.querySelectorAll('.skill_item');
-
-							items.forEach(item => {
-								const progressBar = item.querySelector('.progress-bar');
-								const counterSpan = item.querySelector('.counter');
-								if (!progressBar || !counterSpan) return;
-
-								// 목표 퍼센트 값 가져오기
-								const targetVal = parseInt(progressBar.getAttribute('aria-valuenow') || counterSpan.innerText, 10);
-
-								// 1. 프로그레스 바 초기화 후 차오르게 만들기
-								progressBar.style.width = '0%';
-								setTimeout(() => {
-									progressBar.style.width = targetVal + '%';
-								}, 50);
-
-								// 2. 숫자 카운트 업 (0부터 목표 값까지)
-								counterSpan.innerText = '0';
-								let currentVal = 0;
-								const duration = 1000;
-								const stepTime = Math.max(Math.floor(duration / targetVal), 15);
-
-								// 기존에 실행 중인 타이머가 있으면 중지
-								if (counterSpan.timer) clearInterval(counterSpan.timer);
-
-								counterSpan.timer = setInterval(() => {
-									currentVal += 1;
-									if (currentVal >= targetVal) {
-										counterSpan.innerText = targetVal;
-										clearInterval(counterSpan.timer);
-									} else {
-										counterSpan.innerText = currentVal;
-									}
-								}, stepTime);
-							});
-						}
-						
-						function switchSkillTab(tabId, btn) {
-							// 모든 탭 내용 숨기기
-							document.querySelectorAll('.skill-tab-content').forEach(content => {
-								content.classList.remove('active');
-							});
-							// 모든 탭 버튼 비활성화
-							document.querySelectorAll('.skill-tab-btn').forEach(button => {
-								button.classList.remove('active');
-							});
-
-							// 클릭한 탭 활성화
-							const activeTab = document.getElementById(tabId);
-							activeTab.classList.add('active');
-							btn.classList.add('active');
-
-							// 해당 탭의 애니메이션 재생
-							animateTabSkills(activeTab);
-						}
-					</script>
         <!--================End Welcome Area =================-->
         
         <!--================Feature Area =================-->
